@@ -262,7 +262,7 @@
           }
         ],
         "kickmsg": "no whitelist?",
-        "autoAddClient": true
+        "autoAddClient": false
       },
       "esp": {
         "enable": false
