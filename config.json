@@ -1,0 +1,402 @@
+{
+  "authentication": {
+    "accountType": "device_code",
+    "email": "not@set.com",
+    "password": "abc123",
+    "username": "Unknown",
+    "prio": false,
+    "prioBanned": false,
+    "authTokenRefresh": true,
+    "msaLoginAttemptsBeforeCacheWipe": 2,
+    "openBrowserOnLogin": true,
+    "alwaysRefreshOnLogin": false
+  },
+  "client": {
+    "extra": {
+      "antiafk": {
+        "actions": {
+          "walk": true,
+          "walkDistance": 8,
+          "safeWalk": true,
+          "walkDelayTicks": 400,
+          "swingHand": true,
+          "swingDelayTicks": 3000,
+          "rotate": true,
+          "rotateDelayTicks": 300,
+          "jump": false,
+          "jumpDelayTicks": 1000,
+          "sneak": false
+        },
+        "enabled": true
+      },
+      "spook": {
+        "enabled": false,
+        "tickDelay": 0,
+        "spookTargetingMode": "VISUAL_RANGE"
+      },
+      "utility": {
+        "actions": {
+          "autoDisconnect": {
+            "enabled": false,
+            "whilePlayerConnected": false,
+            "autoClientDisconnect": false,
+            "health": 5,
+            "thunder": false,
+            "cancelAutoReconnect": true,
+            "onUnknownPlayerInVisualRange": false
+          },
+          "activeHours": {
+            "enabled": false,
+            "forceReconnect": false,
+            "queueEtaCalc": true,
+            "timeZoneId": "Universal",
+            "activeTimes": []
+          }
+        }
+      },
+      "autoReconnect": {
+        "enabled": true,
+        "delaySeconds": 3,
+        "maxAttempts": 32767
+      },
+      "autoRespawn": {
+        "enabled": true,
+        "delayMillis": 100
+      },
+      "spammer": {
+        "enabled": false,
+        "whisper": false,
+        "delayTicks": 200,
+        "randomOrder": false,
+        "appendRandom": false,
+        "messages": [
+          "ZenithProxy on top!",
+          "I just skipped queue thanks to ZenithProxy!",
+          "Download ZenithProxy on GitHub today! It's free!"
+        ]
+      },
+      "autoReply": {
+        "enabled": false,
+        "cooldownSeconds": 15,
+        "message": "I am currently AFK, check back later or message me on discord."
+      },
+      "stalk": {
+        "enabled": false,
+        "stalking": []
+      },
+      "autoEat": {
+        "enabled": true,
+        "healthThreshold": 10,
+        "hungerThreshold": 10,
+        "warning": true
+      },
+      "autoFish": {
+        "enabled": false,
+        "castDelay": 20,
+        "yaw": 0.0,
+        "pitch": 0.0
+      },
+      "killAura": {
+        "enabled": true,
+        "targetPlayers": false,
+        "targetHostileMobs": true,
+        "targetNeutralMobs": false,
+        "targetCustom": false,
+        "onlyNeutralAggressive": true,
+        "switchWeapon": true,
+        "targetArmorStands": false,
+        "attackDelayTicks": 10,
+        "attackRange": 3.5,
+        "customTargets": []
+      },
+      "autoTotem": {
+        "enabled": true,
+        "healthThreshold": 20,
+        "noTotemsAlert": false,
+        "noTotemsAlertMention": false,
+        "totemPopAlert": false,
+        "totemPopAlertMention": false
+      },
+      "antiLeak": {
+        "enabled": true,
+        "rangeCheck": true,
+        "rangeFactor": 10.0
+      },
+      "chat": {
+        "ignoreList": [],
+        "hideChat": false,
+        "hideWhispers": false,
+        "hideDeathMessages": false,
+        "showConnectionMessages": false
+      },
+      "antiKick": {
+        "enabled": false,
+        "playerInactivityKickMins": 15,
+        "minWalkDistance": 2
+      },
+      "replayMod": {
+        "sendRecordingsToDiscord": false,
+        "maxRecordingTimeMins": 0,
+        "autoRecordMode": "NONE"
+      },
+      "friendsList": [],
+      "clientConnectionMessages": true,
+      "autoConnectOnLogin": true,
+      "prioBan2b2tCheck": true,
+      "prioStatusChangeMention": true,
+      "killMessage": true,
+      "logChatMessages": true,
+      "actionLimiter": {
+        "enabled": false,
+        "allowRespawn": true,
+        "allowMovement": true,
+        "movementDistance": 1000,
+        "movementHomeX": 0,
+        "movementHomeZ": 0,
+        "movementMinY": -64,
+        "allowEnderChest": true,
+        "allowBlockBreaking": true,
+        "allowInventory": true,
+        "allowUseItem": true,
+        "allowInteract": true,
+        "allowChat": true
+      },
+      "visualRange": {
+        "enabled": true,
+        "ignoreFriends": false,
+        "enterAlert": true,
+        "enterAlertMention": true,
+        "leaveAlert": true,
+        "logoutAlert": true,
+        "replayRecording": false,
+        "replayRecordingCooldownMins": 5
+      },
+      "autoArmor": {
+        "enabled": false
+      }
+    },
+    "server": {
+      "address": "connect.2b2t.org",
+      "port": 25565
+    },
+    "connectionProxy": {
+      "enabled": false,
+      "type": "SOCKS5",
+      "host": "127.0.0.1",
+      "port": 7890,
+      "user": "",
+      "password": ""
+    },
+    "compressionLevel": -1,
+    "autoConnect": false,
+    "viaversion": {
+      "enabled": false,
+      "autoProtocolVersion": true,
+      "protocolVersion": 762
+    },
+    "bindAddress": "0.0.0.0",
+    "maxPlaytimeReconnect": false,
+    "maxPlaytimeReconnectMins": 1440,
+    "timeout": {
+      "enable": true,
+      "seconds": 60
+    },
+    "ping": {
+      "mode": "TABLIST",
+      "packetPingIntervalSeconds": 10
+    }
+  },
+  "debug": {
+    "packetLog": {
+      "enabled": false,
+      "clientPacketLog": {
+        "received": false,
+        "receivedBody": false,
+        "preSent": false,
+        "preSentBody": false,
+        "postSent": false,
+        "postSentBody": false
+      },
+      "serverPacketLog": {
+        "received": false,
+        "receivedBody": false,
+        "preSent": false,
+        "preSentBody": false,
+        "postSent": false,
+        "postSentBody": false
+      },
+      "packetFilter": ""
+    },
+    "server": {
+      "cache": {
+        "sendingmessages": true,
+        "unknownplayers": false
+      }
+    },
+    "clearOldLogs": false,
+    "sendChunksBeforePlayerSpawn": false,
+    "binaryNbtComponentSerializer": true,
+    "kickDisconnect": false,
+    "teleportResync": false
+  },
+  "server": {
+    "bind": {
+      "address": "0.0.0.0",
+      "port": 25565
+    },
+    "compressionThreshold": 256,
+    "compressionLevel": -1,
+    "enabled": true,
+    "extra": {
+      "timeout": {
+        "enable": true,
+        "seconds": 30
+      },
+      "whitelist": {
+        "enable": true,
+        "whitelist": [
+          {
+            "username": "SuperSecretName",
+            "uuid": "deadbeef-cafe-babe-1234-decafbadc0de",
+            "lastRefreshed": 1712465818
+          }
+        ],
+        "kickmsg": "no whitelist?",
+        "autoAddClient": true
+      },
+      "esp": {
+        "enable": false
+      },
+      "chatHistory": {
+        "enable": false,
+        "seconds": 30,
+        "maxCount": 10,
+        "spectators": true
+      }
+    },
+    "ping": {
+      "enabled": true,
+      "onlinePlayers": false,
+      "favicon": true,
+      "maxPlayers": 2147483647,
+      "lanBroadcast": true,
+      "responseCaching": true,
+      "responseCacheSeconds": 10,
+      "logPings": false
+    },
+    "viaversion": {
+      "enabled": false
+    },
+    "verifyUsers": false,
+    "kickPrevious": false,
+    "proxyIP": "71.87.162.245:25565",
+    "queueStatusRefreshMinutes": 5,
+    "healthCheck": true,
+    "playerListsRefreshIntervalMins": 1440,
+    "spectator": {
+      "allowSpectator": true,
+      "spectatorEntity": "cat",
+      "spectatorPublicChatEnabled": true,
+      "spectatorUUID": "c9560dfb-a792-4226-ad06-db1b6dc40b95",
+      "whitelist": [],
+      "logSpectatorChats": false
+    }
+  },
+  "interactiveTerminal": {
+    "enable": true,
+    "logToDiscord": true
+  },
+  "inGameCommands": {
+    "enable": true,
+    "slashCommands": true,
+    "slashCommandsReplacesServerCommands": false,
+    "prefix": "!",
+    "logToDiscord": true
+  },
+  "discord": {
+    "enable": false,
+    "token": "",
+    "channelId": "",
+    "accountOwnerRoleId": "",
+    "visualRangeMentionRoleId": "",
+    "prefix": ".",
+    "reportCoords": true,
+    "mentionRoleOnPrioUpdate": true,
+    "mentionRoleOnPrioBanUpdate": true,
+    "mentionRoleOnDeviceCodeAuth": true,
+    "manageProfileImage": true,
+    "manageNickname": true,
+    "manageDescription": true,
+    "showNonWhitelistLoginIP": true,
+    "isUpdating": false,
+    "queueWarning": {
+      "enabled": true,
+      "position": 10,
+      "mentionRole": false
+    },
+    "chatRelay": {
+      "enable": false,
+      "ignoreQueue": true,
+      "mentionRoleOnWhisper": true,
+      "mentionRoleOnNameMention": true,
+      "mentionWhileConnected": false,
+      "connectionMessages": false,
+      "publicChats": true,
+      "whispers": true,
+      "serverMessages": true,
+      "deathMessages": true,
+      "sendMessages": true,
+      "channelId": ""
+    },
+    "connectionProxy": {
+      "enabled": false,
+      "type": "HTTP",
+      "host": "127.0.0.1",
+      "port": 7890,
+      "user": "",
+      "password": ""
+    }
+  },
+  "database": {
+    "enabled": false,
+    "host": "",
+    "port": 5432,
+    "username": "",
+    "password": "",
+    "writePool": 1,
+    "queueWait": {
+      "enabled": true
+    },
+    "connections": {
+      "enabled": true
+    },
+    "chats": {
+      "enabled": true
+    },
+    "deaths": {
+      "enabled": true,
+      "unknownDeathDiscordMsg": false
+    },
+    "queueLength": {
+      "enabled": true
+    },
+    "restarts": {
+      "enabled": true
+    },
+    "playerCount": {
+      "enabled": true
+    },
+    "tablist": {
+      "enabled": true
+    },
+    "lock": {
+      "redisAddress": "redis://localhost:7181",
+      "redisUsername": "",
+      "redisPassword": ""
+    }
+  },
+  "autoUpdater": {
+    "autoUpdateCheckIntervalSeconds": 300,
+    "shouldReconnectAfterAutoUpdate": false
+  }
+}
