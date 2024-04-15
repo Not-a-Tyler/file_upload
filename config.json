@@ -76,9 +76,9 @@
         ]
       },
       "autoReply": {
-        "enabled": false,
-        "cooldownSeconds": 15,
-        "message": "I am currently AFK, check back later or message me on discord."
+        "enabled": true,
+        "cooldownSeconds": 600,
+        "message": "Hello! I am a bot developed Tyler and Cookies250, if you wish to get in touch please add tylerthedev on discord"
       },
       "stalk": {
         "enabled": false,
@@ -97,7 +97,7 @@
         "pitch": 0.0
       },
       "killAura": {
-        "enabled": true,
+        "enabled": false,
         "targetPlayers": false,
         "targetHostileMobs": true,
         "targetNeutralMobs": false,
@@ -259,9 +259,9 @@
             "username": "SuperSecretName",
             "uuid": "deadbeef-cafe-babe-1234-decafbadc0de",
             "lastRefreshed": 1712465818
-          }
+          },
         ],
-        "kickmsg": "no whitelist?",
+        "kickmsg": "skill issue lmao",
         "autoAddClient": false
       },
       "esp": {
@@ -277,6 +277,7 @@
     "ping": {
       "enabled": true,
       "onlinePlayers": false,
+      "onlinePlayerCount": true,
       "favicon": true,
       "maxPlayers": 2147483647,
       "lanBroadcast": true,
@@ -300,6 +301,10 @@
       "spectatorUUID": "c9560dfb-a792-4226-ad06-db1b6dc40b95",
       "whitelist": [],
       "logSpectatorChats": false
+    },
+    "rateLimiter": {
+      "enabled": true,
+      "rateLimitSeconds": 2
     }
   },
   "interactiveTerminal": {
@@ -312,6 +317,12 @@
     "slashCommandsReplacesServerCommands": false,
     "prefix": "!",
     "logToDiscord": true
+  },
+  "theme": {
+    "primary": "CYAN",
+    "success": "MEDIUM_SEA_GREEN",
+    "error": "RUBY",
+    "inQueue": "MOON_YELLOW"
   },
   "discord": {
     "enable": false,
