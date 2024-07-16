@@ -9,13 +9,15 @@
     "authTokenRefresh": true,
     "msaLoginAttemptsBeforeCacheWipe": 2,
     "openBrowserOnLogin": true,
-    "alwaysRefreshOnLogin": false
+    "alwaysRefreshOnLogin": false,
+    "maxRefreshIntervalMins": 360,
+    "useClientConnectionProxy": false
   },
   "client": {
     "extra": {
       "antiafk": {
         "actions": {
-          "walk": true,
+          "walk": false,
           "walkDistance": 8,
           "safeWalk": true,
           "walkDelayTicks": 400,
@@ -24,20 +26,21 @@
           "rotate": true,
           "rotateDelayTicks": 300,
           "jump": false,
-          "jumpDelayTicks": 1000,
+          "jumpOnlyInWater": true,
+          "jumpDelayTicks": 1,
           "sneak": false
         },
         "enabled": true
       },
       "spook": {
         "enabled": false,
-        "tickDelay": 0,
         "spookTargetingMode": "VISUAL_RANGE"
       },
       "utility": {
         "actions": {
           "autoDisconnect": {
             "enabled": false,
+            "healthDisconnect": true,
             "whilePlayerConnected": false,
             "autoClientDisconnect": false,
             "health": 5,
@@ -56,8 +59,8 @@
       },
       "autoReconnect": {
         "enabled": true,
-        "delaySeconds": 3,
-        "maxAttempts": 32767
+        "delaySeconds": 5,
+        "maxAttempts": 200
       },
       "autoRespawn": {
         "enabled": true,
@@ -76,9 +79,9 @@
         ]
       },
       "autoReply": {
-        "enabled": true,
-        "cooldownSeconds": 600,
-        "message": "Hello! I am a bot developed Tyler and Cookies250, if you wish to get in touch please add tylerthedev on discord"
+        "enabled": false,
+        "cooldownSeconds": 15,
+        "message": "I am currently AFK, check back later or message me on discord."
       },
       "stalk": {
         "enabled": false,
@@ -97,7 +100,7 @@
         "pitch": 0.0
       },
       "killAura": {
-        "enabled": false,
+        "enabled": true,
         "targetPlayers": false,
         "targetHostileMobs": true,
         "targetNeutralMobs": false,
@@ -111,6 +114,7 @@
       },
       "autoTotem": {
         "enabled": true,
+        "inGame": false,
         "healthThreshold": 20,
         "noTotemsAlert": false,
         "noTotemsAlertMention": false,
@@ -158,6 +162,7 @@
         "allowBlockBreaking": true,
         "allowInventory": true,
         "allowUseItem": true,
+        "allowBookSigning": true,
         "allowInteract": true,
         "allowChat": true
       },
@@ -169,9 +174,13 @@
         "leaveAlert": true,
         "logoutAlert": true,
         "replayRecording": false,
+        "replayRecordingMode": "ENEMY",
         "replayRecordingCooldownMins": 5
       },
       "autoArmor": {
+        "enabled": false
+      },
+      "autoMend": {
         "enabled": false
       }
     },
@@ -180,7 +189,7 @@
       "port": 25565
     },
     "connectionProxy": {
-      "enabled": false,
+      "enabled": true,
       "type": "SOCKS5",
       "host": "127.0.0.1",
       "port": 7890,
@@ -192,7 +201,7 @@
     "viaversion": {
       "enabled": false,
       "autoProtocolVersion": true,
-      "protocolVersion": 762
+      "protocolVersion": 765
     },
     "bindAddress": "0.0.0.0",
     "maxPlaytimeReconnect": false,
@@ -229,15 +238,18 @@
     },
     "server": {
       "cache": {
-        "sendingmessages": true,
-        "unknownplayers": false
+        "unlockAllRecipes": true
       }
     },
     "clearOldLogs": false,
     "sendChunksBeforePlayerSpawn": false,
     "binaryNbtComponentSerializer": true,
     "kickDisconnect": false,
-    "teleportResync": false
+    "resyncTeleports": true,
+    "ncpStrictInventory": false,
+    "clientTickFixedRate": false,
+    "debugLogs": false,
+    "blockProtocolSwitchRaceCondition": true
   },
   "server": {
     "bind": {
@@ -258,10 +270,10 @@
           {
             "username": "SuperSecretName",
             "uuid": "deadbeef-cafe-babe-1234-decafbadc0de",
-            "lastRefreshed": 1712465818
-          },
+            "lastRefreshed": 1721111809
+          }
         ],
-        "kickmsg": "skill issue lmao",
+        "kickmsg": "skill issue",
         "autoAddClient": false
       },
       "esp": {
@@ -286,11 +298,11 @@
       "logPings": false
     },
     "viaversion": {
-      "enabled": false
+      "enabled": true,
+      "autoRemoveFromPipeline": true
     },
     "verifyUsers": false,
-    "kickPrevious": false,
-    "proxyIP": "71.87.162.245:25565",
+    "proxyIP": "172.223.150.137:25565",
     "queueStatusRefreshMinutes": 5,
     "healthCheck": true,
     "playerListsRefreshIntervalMins": 1440,
@@ -298,18 +310,18 @@
       "allowSpectator": true,
       "spectatorEntity": "cat",
       "spectatorPublicChatEnabled": true,
-      "spectatorUUID": "c9560dfb-a792-4226-ad06-db1b6dc40b95",
-      "whitelist": [],
-      "logSpectatorChats": false
+      "whitelist": []
     },
     "rateLimiter": {
       "enabled": true,
       "rateLimitSeconds": 2
-    }
+    },
+    "connectionTestOnStart": true
   },
   "interactiveTerminal": {
     "enable": true,
-    "logToDiscord": true
+    "logToDiscord": true,
+    "allowDumbTerminal": true
   },
   "inGameCommands": {
     "enable": true,
@@ -374,7 +386,6 @@
     "port": 5432,
     "username": "",
     "password": "",
-    "writePool": 1,
     "queueWait": {
       "enabled": true
     },
